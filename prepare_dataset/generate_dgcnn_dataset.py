@@ -368,7 +368,7 @@ print("Total samples: {0}".format(sample_cnt))
 with open(output_dir+"/all_files.txt","w") as fw:
     files_h5 = glob.glob(output_dir+"/*.h5")
     for f in files_h5[:-1]:
-        fw.write(os.path.basename(f) + "\n")
+        fw.write(output_dir+"/"+os.path.basename(f) + "\n")
     fw.write(os.path.basename(files_h5[-1]))
 
 print("Done!")
